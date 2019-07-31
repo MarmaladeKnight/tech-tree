@@ -1,4 +1,28 @@
-import * as SVG from "svg.js";
+// import TreeNode from './TreeNode';
+import * as SVG from 'svg.js';
 
-var draw: SVG.Doc = SVG('drawing').size(300, 300);
-let rect: any = draw.rect(100, 100).attr({ fill: '#006' });
+import Scene from './Scene';
+import { Section } from './types'
+
+const sceneBox: HTMLElement = document.getElementById('drawing');
+
+
+const technologies: Section = {
+        subSections: [
+            {
+                subSections: [],
+                title: "HTML"
+            },
+            {
+                subSections: [],
+                title: "CSS"
+            },
+            {
+                subSections: [],
+                title: "JS"
+            }
+        ],
+        title: "Web"
+    }
+
+const scene = new Scene(sceneBox, technologies);
